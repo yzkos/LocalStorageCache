@@ -1,11 +1,11 @@
-const localStorageCache = {};
+const lscache = {};
 /**
  * 设置数据缓存
  * @param key 缓存key
  * @param val 缓存val
  * @param time 缓存时间（秒） time === 0 则默认没有过期时间
  */
-localStorageCache.set = (key, val, time = 0) => {
+lscache.set = (key, val, time = 0) => {
     let timestamp = (new Date()).valueOf();
     let item;
     if (time === 0) {
@@ -30,7 +30,7 @@ localStorageCache.set = (key, val, time = 0) => {
  * 获取缓存
  * @param key 缓存key
  */
-localStorageCache.get = key => {
+lscache.get = key => {
     let timestamp = (new Date()).valueOf();
     try {
         let val;
@@ -62,7 +62,7 @@ localStorageCache.get = key => {
  * 删除缓存
  * @param key 缓存key
  */
-localStorageCache.del = key => {
+lscache.del = key => {
     if (localStorage != undefined) {
         localStorage.removeItem(key);
     } else if (uni.removeStorageSync != undefined) {
@@ -72,7 +72,7 @@ localStorageCache.del = key => {
     }
 };
 
-export default localStorageCache;
+export default lscache;
 
 /**
  * 简单调用函数
@@ -82,8 +82,8 @@ export default localStorageCache;
  */
 export const cache = (key, val = '', time = 3600) => {
     if (val === '') {
-        return localStorageCache.get(key);
+        return lscache.get(key);
     } else {
-        return localStorageCache.set(key, val, time);
+        return lscache.set(key, val, time);
     }
 };
