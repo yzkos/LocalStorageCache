@@ -1,18 +1,18 @@
 # local-storage-cache
 
-npm:
+#### npm:
 
 ```shell
 npm i local-storage-cache
 ```
 
-yarn:
+#### yarn:
 
 ```shell
 yarn add local-storage-cache
 ```
 
-usage：
+#### usage：
 
 ```javascript
 import localStorageCache from 'local-storage-cache';
@@ -30,7 +30,7 @@ localStorageCache.get('key1');
 localStorageCache.del('key1');
 ```
 
-simple usage:
+#### simple usage:
 
 ```javascript
 import {cache} from 'local-storage-cache';
