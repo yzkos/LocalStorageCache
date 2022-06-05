@@ -11,7 +11,7 @@
     "url": "git+https://github.com/yzkos/LocalStorageCache.git"
   },
   "author": "yzkos",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yzkos/LocalStorageCache/issues"
   },
