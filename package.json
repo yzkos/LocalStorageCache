@@ -1,7 +1,7 @@
 {
-  "name": "localstoragecache",
+  "name": "local-storage-cache",
   "version": "1.0.0",
-  "description": "",
+  "description": "localstorage数据增加缓存时间，到期删除缓存",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
