@@ -3,37 +3,37 @@
 #### npm:
 
 ```shell
-npm install local-storage-cache
+npm install simple-lscache
 ```
 
 #### yarn:
 
 ```shell
-yarn add local-storage-cache
+yarn add simple-lscache
 ```
 
 #### usage：
 
 ```javascript
-import localStorageCache from 'local-storage-cache';
+import lscache from 'simple-lscache';
 
 //set string 60s
-localStorageCache.set('key1', '11', 60);
+lscache.set('key1', '11', 60);
 
 //set object 60s
-localStorageCache.set('key2', {key: 'val'}, 60);
+lscache.set('key2', {key: 'val'}, 60);
 
 //get
-localStorageCache.get('key1');
+lscache.get('key1');
 
 //del
-localStorageCache.del('key1');
+lscache.del('key1');
 ```
 
 #### simple usage:
 
 ```javascript
-import {cache} from 'local-storage-cache';
+import {cache} from 'simple-lscache';
 
 //set
 cache('key1', 'val', 60);
