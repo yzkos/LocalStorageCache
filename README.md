@@ -3,7 +3,7 @@
 #### npm:
 
 ```shell
-npm i local-storage-cache
+npm install local-storage-cache
 ```
 
 #### yarn:
