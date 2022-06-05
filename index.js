@@ -3,9 +3,9 @@ const lscache = {};
  * 设置数据缓存
  * @param key 缓存key
  * @param val 缓存val
- * @param time 缓存时间（秒） time === 0 则默认没有过期时间
+ * @param time 缓存时间（秒）默认 3600 秒； time === 0 则默认没有过期时间
  */
-lscache.set = (key, val, time = 0) => {
+lscache.set = (key, val, time = 3600) => {
     let timestamp = (new Date()).valueOf();
     let item;
     if (time === 0) {
